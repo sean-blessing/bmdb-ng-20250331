@@ -1,0 +1,35 @@
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Movie } from '../../../model/movie';
+import { MovieService } from '../../../service/movie-service';
+
+@Component({
+  selector: 'app-movie-list',
+  standalone: false,
+  templateUrl: './movie-list.html',
+  styleUrl: './movie-list.css'
+})
+export class MovieList implements OnInit, OnDestroy{
+  title: string = "Movie-List";
+  subscription!: Subscription;
+  movies: Movie[] = [];
+
+  constructor(private movieSvc: MovieService){}
+
+  ngOnInit(): void {
+    // call movieSvc and populate list of movies
+    this.subscription = this.movieSvc.list().subscribe({
+      next: (resp) => {
+        this.movies = resp;
+        console.log("movies", this.movies);
+      },
+      error: (err) => {
+        console.log("Error retrieving movies list.", err);
+      }
+    });
+  }
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
+}
