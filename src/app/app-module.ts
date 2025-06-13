@@ -10,6 +10,8 @@ import { MovieCreate } from './feature/movie/movie-create/movie-create';
 import { MovieEdit } from './feature/movie/movie-edit/movie-edit';
 import { NotFound } from './core/not-found/not-found';
 import { FormsModule } from '@angular/forms';
+import { ActorList } from './feature/actor/actor-list/actor-list';
+import { Menu } from './core/menu/menu';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     MovieDetail,
     MovieCreate,
     MovieEdit,
-    NotFound
+    NotFound,
+    ActorList,
+    Menu
   ],
   imports: [
     BrowserModule,
