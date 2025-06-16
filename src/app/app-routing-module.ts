@@ -7,6 +7,10 @@ import { MovieEdit } from './feature/movie/movie-edit/movie-edit';
 import { NotFound } from './core/not-found/not-found';
 import { ActorList } from './feature/actor/actor-list/actor-list';
 import { ActorCreate } from './feature/actor/actor-create/actor-create';
+import { CreditCreate } from './feature/credit/credit-create/credit-create';
+import { CreditDetail } from './feature/credit/credit-detail/credit-detail';
+import { CreditEdit } from './feature/credit/credit-edit/credit-edit';
+import { CreditList } from './feature/credit/credit-list/credit-list';
 
 const routes: Routes = [
   { path: '', redirectTo: 'movie-list', pathMatch: 'full' },
@@ -16,6 +20,10 @@ const routes: Routes = [
   { path: 'movie-detail/:id', component: MovieDetail },
   { path: 'actor-list', component: ActorList },
   { path: 'actor-create', component: ActorCreate },
+  { path: 'credit-list', component: CreditList },
+  { path: 'credit-create', component: CreditCreate },
+  { path: 'credit-edit/:id', component: CreditEdit },
+  { path: 'credit-detail/:id', component: CreditDetail },
   { path: '**', component: NotFound },
 ];
 
