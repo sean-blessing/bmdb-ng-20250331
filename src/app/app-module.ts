@@ -12,6 +12,7 @@ import { NotFound } from './core/not-found/not-found';
 import { FormsModule } from '@angular/forms';
 import { ActorList } from './feature/actor/actor-list/actor-list';
 import { Menu } from './core/menu/menu';
+import { ActorCreate } from './feature/actor/actor-create/actor-create';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Menu } from './core/menu/menu';
     MovieEdit,
     NotFound,
     ActorList,
-    Menu
+    Menu,
+    ActorCreate
   ],
   imports: [
     BrowserModule,

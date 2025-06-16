@@ -6,6 +6,7 @@ import { MovieDetail } from './feature/movie/movie-detail/movie-detail';
 import { MovieEdit } from './feature/movie/movie-edit/movie-edit';
 import { NotFound } from './core/not-found/not-found';
 import { ActorList } from './feature/actor/actor-list/actor-list';
+import { ActorCreate } from './feature/actor/actor-create/actor-create';
 
 const routes: Routes = [
   { path: '', redirectTo: 'movie-list', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'movie-edit/:id', component: MovieEdit },
   { path: 'movie-detail/:id', component: MovieDetail },
   { path: 'actor-list', component: ActorList },
+  { path: 'actor-create', component: ActorCreate },
   { path: '**', component: NotFound },
 ];
 
