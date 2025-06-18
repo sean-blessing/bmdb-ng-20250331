@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Movie } from '../../../model/movie';
 import { MovieService } from '../../../service/movie-service';
+import { SystemService } from '../../../service/system-service';
 
 @Component({
   selector: 'app-movie-list',
@@ -13,10 +14,14 @@ export class MovieList implements OnInit, OnDestroy {
   title: string = 'Movie-List';
   subscription!: Subscription;
   movies: Movie[] = [];
+  welcomeName: string = '';
 
-  constructor(private movieSvc: MovieService) {}
+  constructor(private movieSvc: MovieService,
+              private sysSvc: SystemService
+  ) {}
 
   ngOnInit(): void {
+    this.welcomeName = this.sysSvc.loggedInUser.firstName;
     // call movieSvc and populate list of movies
     this.subscription = this.movieSvc.list().subscribe({
       next: (resp) => {

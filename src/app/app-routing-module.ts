@@ -11,6 +11,7 @@ import { CreditCreate } from './feature/credit/credit-create/credit-create';
 import { CreditDetail } from './feature/credit/credit-detail/credit-detail';
 import { CreditEdit } from './feature/credit/credit-edit/credit-edit';
 import { CreditList } from './feature/credit/credit-list/credit-list';
+import { UserLogin } from './feature/user/user-login/user-login';
 
 const routes: Routes = [
   { path: '', redirectTo: 'movie-list', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'credit-create', component: CreditCreate },
   { path: 'credit-edit/:id', component: CreditEdit },
   { path: 'credit-detail/:id', component: CreditDetail },
+  { path: 'user-login', component: UserLogin },
   { path: '**', component: NotFound },
 ];
 
