@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<div class="p-4">
+  <section class="heading">
+    <span class="page-title font-weight-bold font-italic">{{ title }}</span>
+    <span class="page-title font-weight-bold font-italic">Movie Detail</span>
+  </section>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Movie</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ movie.title}} ({{ movie.year }})</td>
+        <td>{{ movie.rating }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <section class="heading">
+    <span class="page-title font-weight-bold font-italic">Movie Credits</span>
+  </section>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Actor</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let credit of credits">
+        <td>{{ credit.actor.lastName}}, ({{ credit.actor.firstName }})</td>
+        <td>{{ credit.role }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

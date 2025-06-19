@@ -12,6 +12,7 @@ import { CreditDetail } from './feature/credit/credit-detail/credit-detail';
 import { CreditEdit } from './feature/credit/credit-edit/credit-edit';
 import { CreditList } from './feature/credit/credit-list/credit-list';
 import { UserLogin } from './feature/user/user-login/user-login';
+import { MovieCredit } from './feature/movie/movie-credit/movie-credit';
 
 const routes: Routes = [
   { path: '', redirectTo: 'movie-list', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'movie-create', component: MovieCreate },
   { path: 'movie-edit/:id', component: MovieEdit },
   { path: 'movie-detail/:id', component: MovieDetail },
+  { path: 'movie-credits/:movieId', component: MovieCredit },
   { path: 'actor-list', component: ActorList },
   { path: 'actor-create', component: ActorCreate },
   { path: 'credit-list', component: CreditList },

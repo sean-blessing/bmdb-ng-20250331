@@ -21,6 +21,7 @@ import { CreditCreate } from './feature/credit/credit-create/credit-create';
 import { CreditDetail } from './feature/credit/credit-detail/credit-detail';
 import { CreditEdit } from './feature/credit/credit-edit/credit-edit';
 import { UserLogin } from './feature/user/user-login/user-login';
+import { MovieCredit } from './feature/movie/movie-credit/movie-credit';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { UserLogin } from './feature/user/user-login/user-login';
     CreditEdit,
     CreditDetail,
     UserLogin,
+    MovieCredit,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
